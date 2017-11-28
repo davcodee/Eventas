@@ -17,4 +17,7 @@
     <string name="ventas">Ventas</string>
     <string name="inventario">Inventario</string>
     <string name="SignOut">Cerrar sesión</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -3,6 +3,8 @@ package com.example.deyvi.eventas;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,13 +16,30 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.deyvi.eventas.Fragments.InventarioFragment;
+import com.example.deyvi.eventas.Fragments.ProductosFragment;
+import com.example.deyvi.eventas.Fragments.VentasFragment;
+
 public class ContainerActivity extends AppCompatActivity
 		implements NavigationView.OnNavigationItemSelectedListener {
+
+	/*Fragments que vamos a crear cuando se de click en cada item*/
+	private Fragment fragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_container);
+		//colocamos el fragment por default
+		if(savedInstanceState == null){
+			fragment = new ProductosFragment();
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.container, fragment)
+					.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+					.addToBackStack(null)
+					.commit();
+		}
+
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 		toolbar.setTitleTextColor(getResources().getColor(R.color.colorPrimary));
@@ -61,6 +80,7 @@ public class ContainerActivity extends AppCompatActivity
 		return true;
 	}
 
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
@@ -76,22 +96,49 @@ public class ContainerActivity extends AppCompatActivity
 		return super.onOptionsItemSelected(item);
 	}
 
+
+
+	/*
+	* Método que determinará la pantalla a mostrar dependiendo el
+	* item seleccionado
+	* */
 	@SuppressWarnings("StatementWithEmptyBody")
 	@Override
 	public boolean onNavigationItemSelected(MenuItem item) {
 		// Handle navigation view item clicks here.
 		int id = item.getItemId();
 
+		/*Acción a realizar cuando de click en el item de productos*/
 		if (id == R.id.itemProductos) {
-			// Handle the camera action
-			Toast.makeText(this, "Productos", Toast.LENGTH_SHORT).show();
-		} else if (id == R.id.nav_gallery) {
-			Toast.makeText(this, "Ventas", Toast.LENGTH_SHORT).show();
 
-		} else if (id == R.id.nav_slideshow) {
-			Toast.makeText(this, "Inventario", Toast.LENGTH_SHORT).show();
+			fragment = new ProductosFragment();
+
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.container, fragment)
+					.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+					.addToBackStack(null)
+					.commit();
+
+		} else if (id == R.id.itemVentas) {
+			fragment = new VentasFragment();
+
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.container, fragment)
+					.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+					.addToBackStack(null)
+					.commit();
+
+		} else if (id == R.id.itemInventario) {
+			fragment = new InventarioFragment();
+
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.container, fragment)
+					.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+					.addToBackStack(null)
+					.commit();
+
 		}else if (id == R.id.itemCerrarSesion){
-			finish();
+				finish();
 		}
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

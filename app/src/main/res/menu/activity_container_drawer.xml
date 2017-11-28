@@ -9,11 +9,11 @@
             android:icon="@drawable/productos"
             android:title="@string/productos" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/itemVentas"
             android:icon="@drawable/ventas"
             android:title="@string/ventas" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/itemInventario"
             android:icon="@drawable/inventario"
             android:title="@string/inventario" />
 

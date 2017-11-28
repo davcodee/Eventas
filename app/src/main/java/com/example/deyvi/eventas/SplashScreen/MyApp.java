@@ -1,4 +1,4 @@
-package com.example.deyvi.eventas;
+package com.example.deyvi.eventas.SplashScreen;
 
 import android.app.Application;
 import android.os.SystemClock;
