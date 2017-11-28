@@ -12,6 +12,9 @@ import android.widget.Toast;
 import com.example.deyvi.eventas.ContainerActivity;
 import com.example.deyvi.eventas.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
 	/*Button Login*/
@@ -52,11 +55,40 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 		switch (view.getId()){
 			case R.id.btnLogin:
-				startActivity(new Intent(LoginActivity.this, ContainerActivity.class));
+				if (getText()){
+					startActivity(new Intent(LoginActivity.this, ContainerActivity.class));
+				}
 				break;
 			case R.id.edtCreateAccount:
 				Toast.makeText(this, "Disabled", Toast.LENGTH_SHORT).show();
 				break;
 		}
 	}
+
+	/*Método que estrae el texto de los campos de nuestros
+	*editText y valida que el usuario sea correcto.
+	* */
+	private boolean getText(){
+		String email    = edtEmail.getText().toString().trim();
+		String password = edtPass.getText().toString().trim();
+
+
+		if (email.equals( "a_esperanza@gmail.com") && password.equals("123")){
+				return true;
+		}if(email.equals("tdamagica@gmail.com" ) && password.equals("123")){
+				return true;
+		}if(email.equals("tiendita@gmail.com") && password.equals("123")){
+				return true;
+		}if(email.equals("sumprema@gmail.com") && password.equals("123")){
+				return true;
+		}else {
+			Toast.makeText(this, "Usuario Invalido", Toast.LENGTH_SHORT).show();
+			return false;
+		}
+
+	}
+
+
+
+
 }
