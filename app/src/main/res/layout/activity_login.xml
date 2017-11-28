@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.deyvi.eventas.LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
+
+            <ImageView
+                android:src="@drawable/eventas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                 />
+        </RelativeLayout>
+
+        <ScrollView
+            android:fillViewport="true"
+            android:layout_weight="0.4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Primer TextInputEditText, el cual servirá para el campo
+                    del Email
+                -->
+                <android.support.design.widget.TextInputLayout
+                    android:theme="@style/EditTextWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edtEmail"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--
+                    Segundo TextInputEditText, el cual servirá para la contraseña
+                -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextWhite"
+                    >
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edtPassword"
+                        android:inputType="textPassword"
+                        android:hint="@string/edtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:theme="@style/RaisedButtonDark"
+                    android:layout_margin="@dimen/dimenButton"
+                    android:textColor="@color/editTextcolorWhite"
+                    android:text="@string/btnLogin"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/edtCreateAccount"
+                    android:textSize="@dimen/tvCreateAccount"
+                    android:textColor="@color/editTextcolorWhite"
+                    android:layout_gravity="center"
+                    android:text="@string/tvCreateAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

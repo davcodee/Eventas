@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="EditTextWhite" parent="TextAppearance.AppCompat">
+
+        <!--Color de nuestro texto-->
+        <item name="android:textColorPrimary">@color/editTextcolorWhite</item>
+
+        <!--size of fount -->
+        <item name="android:textSize">@dimen/editTextSize</item>
+
+        <!--Color of hint -->
+        <item name="android:textColorHint">@color/editTextcolorWhite</item>
+
+        <!--Color of Theme -->
+        <item name="colorAccent">@color/editTextcolorWhite</item>
+
+        <!--Color contral normal-->
+        <item name="colorControlNormal">@color/editTextcolorWhite</item>
+
+        <!--color control normal-->
+        <item name="android:colorControlNormal">@color/editTextcolorWhite</item>
+
+        <!--Color control activated-->
+        <item name="android:colorControlActivated">@color/editTextcolorWhite</item>
+
+    </style>
+
+    <style name="RaisedButtonDark" parent="Theme.AppCompat.Light">
+
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="splash" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+</resources>
