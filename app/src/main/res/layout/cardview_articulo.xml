@@ -37,6 +37,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lineColor"/>
+        <TextView
+            android:id="@+id/tvAlta"
+            android:gravity="center"
+            android:text="@string/ventas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lineColor"/>
+        <TextView
+            android:id="@+id/tvMovto"
+            android:gravity="center"
+            android:text="@string/ventas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
 
     </LinearLayout>

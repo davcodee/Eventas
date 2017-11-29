@@ -12,6 +12,7 @@ import com.example.deyvi.eventas.POJO.Articulo;
 import com.example.deyvi.eventas.R;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * Created by deyvi on 28/11/2017.
@@ -19,11 +20,11 @@ import java.util.ArrayList;
 
 public class ArticuloAdapter extends  RecyclerView.Adapter<ArticuloAdapter.ArticuloViewHolder>  {
 
-	private ArrayList<Articulo> articulos;
+	private LinkedList<Articulo> articulos;
 	private  int                recurso;
 	private Activity            activity;
 
-	public ArticuloAdapter(ArrayList<Articulo> articulos, int recurso, Activity activity) {
+	public ArticuloAdapter(LinkedList<Articulo> articulos, int recurso, Activity activity) {
 		this.articulos = articulos;
 		this.recurso = recurso;
 		this.activity = activity;
@@ -41,9 +42,11 @@ public class ArticuloAdapter extends  RecyclerView.Adapter<ArticuloAdapter.Artic
 	public void onBindViewHolder(ArticuloViewHolder holder, int position) {
 		Articulo articulo = articulos.get(position);
 
-		holder.id.setText(articulo.getId());
-		holder.section.setText(articulo.getSection());
-		holder.vendidos.setText(articulo.getVendidos());
+		holder.tvID.setText(articulo.getId());
+		holder.tvSection.setText("" + articulo.getSection());
+		holder.tvVentas.setText("" + articulo.getVendidos());
+		holder.tvAlta.setText(articulo.getAlta());
+		holder.tvMovto.setText(articulo.getMovto());
 	}
 
 	@Override
@@ -53,17 +56,22 @@ public class ArticuloAdapter extends  RecyclerView.Adapter<ArticuloAdapter.Artic
 
 	public class ArticuloViewHolder extends RecyclerView.ViewHolder{
 
-		private TextView id;
-		private TextView section;
-		private TextView vendidos;
+		private TextView tvID;
+		private TextView tvSection;
+		private TextView tvVentas;
+		private TextView tvAlta;
+		private TextView tvMovto;
 
 
 		public ArticuloViewHolder(View itemView) {
 			super(itemView);
 
-			id          =  (TextView)itemView.findViewById(R.id.tvID);
-			section     =  (TextView)itemView.findViewById(R.id.tvSection);
-			vendidos    =  (TextView)itemView.findViewById(R.id.tvVentas);
+			tvID          =(TextView)itemView.findViewById(R.id.tvID);
+			tvSection     =(TextView)itemView.findViewById(R.id.tvSection);
+			tvVentas      =(TextView)itemView.findViewById(R.id.tvVentas);
+			tvAlta        =(TextView)itemView.findViewById(R.id.tvAlta);
+			tvMovto       =(TextView)itemView.findViewById(R.id.tvMovto);
+
 
 		}
 	}
