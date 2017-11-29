@@ -1,20 +1,22 @@
 package com.example.deyvi.eventas.POJO;
 
+import android.graphics.drawable.Drawable;
+
 /**
  * Created by deyvi on 28/11/2017.
  */
 
 public class ArticuloInventario {
 	private String id;
-	private int    image;
+	private Drawable image;
 	private int  existencia;
 	private int stock;
-	private String inv_fisico;
+	private int inv_fisico;
 	private String alta;
 	private String movto;
 
 
-	public ArticuloInventario(String id, int image, int existencia, int stock, String inv_fisico, String alta, String movto) {
+	public ArticuloInventario(String id, Drawable image, int existencia, int stock, int inv_fisico, String alta, String movto) {
 		this.id = id;
 		this.image = image;
 		this.existencia = existencia;
@@ -32,11 +34,11 @@ public class ArticuloInventario {
 		this.id = id;
 	}
 
-	public int getImage() {
+	public Drawable getImage() {
 		return image;
 	}
 
-	public void setImage(int image) {
+	public void setImage(Drawable image) {
 		this.image = image;
 	}
 
@@ -56,11 +58,11 @@ public class ArticuloInventario {
 		this.stock = stock;
 	}
 
-	public String getInv_fisico() {
+	public int getInv_fisico() {
 		return inv_fisico;
 	}
 
-	public void setInv_fisico(String inv_fisico) {
+	public void setInv_fisico(int inv_fisico) {
 		this.inv_fisico = inv_fisico;
 	}
 
