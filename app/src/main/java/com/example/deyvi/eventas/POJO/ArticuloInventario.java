@@ -6,14 +6,17 @@ package com.example.deyvi.eventas.POJO;
 
 public class ArticuloInventario {
 	private String id;
+	private int    image;
 	private int  existencia;
 	private int stock;
 	private String inv_fisico;
 	private String alta;
 	private String movto;
 
-	public ArticuloInventario(String id, int existencia, int stock, String inv_fisico, String alta, String movto) {
+
+	public ArticuloInventario(String id, int image, int existencia, int stock, String inv_fisico, String alta, String movto) {
 		this.id = id;
+		this.image = image;
 		this.existencia = existencia;
 		this.stock = stock;
 		this.inv_fisico = inv_fisico;
@@ -27,6 +30,14 @@ public class ArticuloInventario {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public int getImage() {
+		return image;
+	}
+
+	public void setImage(int image) {
+		this.image = image;
 	}
 
 	public int getExistencia() {
