@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.deyvi.eventas.POJO.Articulo;
@@ -19,7 +20,6 @@ import java.util.LinkedList;
  */
 
 public class ArticuloAdapter extends  RecyclerView.Adapter<ArticuloAdapter.ArticuloViewHolder>  {
-
 	private LinkedList<Articulo> articulos;
 	private  int                recurso;
 	private Activity            activity;
@@ -75,4 +75,5 @@ public class ArticuloAdapter extends  RecyclerView.Adapter<ArticuloAdapter.Artic
 
 		}
 	}
+
 }

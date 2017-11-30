@@ -1,24 +1,45 @@
 package com.example.deyvi.eventas.POJO;
 
+import android.graphics.drawable.Drawable;
+
 /**
  * Created by deyvi on 28/11/2017.
  */
 
 public class ArticuloVenta {
+	private String   name;
+	private Drawable image;
 	private String id;
-	private int    image;
-	private int    section;
-	private int    vendidos;
-	private String alta;
-	private String movto;
 
-	public ArticuloVenta(String id, int image, int section, int vendidos, String alta, String movto) {
-		this.id = id;
+	private int section;
+	private int    costo;
+	private int     venta;
+	private String alta;
+
+	public ArticuloVenta(String name, Drawable image, String id, int section, int costo, int venta, String alta) {
+		this.name = name;
 		this.image = image;
+		this.id = id;
 		this.section = section;
-		this.vendidos = vendidos;
+		this.costo = costo;
+		this.venta = venta;
 		this.alta = alta;
-		this.movto = movto;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Drawable getImage() {
+		return image;
+	}
+
+	public void setImage(Drawable image) {
+		this.image = image;
 	}
 
 	public String getId() {
@@ -29,14 +50,6 @@ public class ArticuloVenta {
 		this.id = id;
 	}
 
-	public int getImage() {
-		return image;
-	}
-
-	public void setImage(int image) {
-		this.image = image;
-	}
-
 	public int getSection() {
 		return section;
 	}
@@ -45,12 +58,20 @@ public class ArticuloVenta {
 		this.section = section;
 	}
 
-	public int getVendidos() {
-		return vendidos;
+	public int getCosto() {
+		return costo;
 	}
 
-	public void setVendidos(int vendidos) {
-		this.vendidos = vendidos;
+	public void setCosto(int costo) {
+		this.costo = costo;
+	}
+
+	public int getVenta() {
+		return venta;
+	}
+
+	public void setVenta(int venta) {
+		this.venta = venta;
 	}
 
 	public String getAlta() {
@@ -59,13 +80,5 @@ public class ArticuloVenta {
 
 	public void setAlta(String alta) {
 		this.alta = alta;
-	}
-
-	public String getMovto() {
-		return movto;
-	}
-
-	public void setMovto(String movto) {
-		this.movto = movto;
 	}
 }

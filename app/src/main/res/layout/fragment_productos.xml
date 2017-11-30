@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.deyvi.eventas.Fragments.ProductosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:gravity="center"
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvProductos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Productos" />
+        android:layout_height="match_parent"/>
+
 
 </FrameLayout>
